@@ -5,8 +5,10 @@ const DefaultLayout = () => {
     return (
         <>
             <Header />
-            <main>
-                <Outlet />
+            <main className="bg-secondary">
+                <div className="container py-4">
+                    <Outlet />
+                </div>
             </main>
         </>
     )
