@@ -15,7 +15,7 @@ Creare 2 pagine:
 
 ### MILESTONE 3
 - Configurare l’app di backend (repo webapp-express) a ricevere chiamate dall applicazione React, installando e impostando il middleware CORS.  
-- Provare quindi ad effettuare una chiamata Ajax dalla home del progetto React, per ottenere la lista dei libri
+- Provare quindi ad effettuare una chiamata Ajax dalla home del progetto React, per ottenere la lista dei film.
 
 ### Bonus
 - Impostare la struttura del lavoro in maniera da sfruttare la riutailizzabilità dei componenti React e le loro props
