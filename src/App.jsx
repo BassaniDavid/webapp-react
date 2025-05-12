@@ -1,4 +1,6 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MoviesPage from "../pages/Movies";
+import MoviesDetail from "../pages/MoviesDetail";
 
 function App() {
 
@@ -7,9 +9,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<div>Home page</div>} />
-          <Route path="/movies" element={<div>elenco film</div>} />
-          <Route path="/movies/:id" element={<div>dettagli film</div>} />
-          <Route path="/contacts" element={<div>Chi siamo</div>} />
+          <Route path="/movies" element={<MoviesPage />} />
+          <Route path="/movies/:id" element={<MoviesDetail />} />
+          <Route path="/contacts" element={<div>Contatti</div>} />
+          <Route path="/about" element={<div>Chi siamo</div>} />
           <Route path="*" element={<div>error 404</div>} />
         </Routes>
       </BrowserRouter>
