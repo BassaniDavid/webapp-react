@@ -24,7 +24,9 @@ const MoviesPage = () => {
 
             <section className="row">
                 {movies.length ? movies.map(movie => (
-                    <MovieCard />
+                    <div key={movie.id}>
+                        <MovieCard data={movie} />
+                    </div>
                 )) : <div>nessun film trovato</div>}
             </section>
         </div>
