@@ -39,7 +39,7 @@ const MoviesDetail = () => {
                     </div>
 
                     <div>
-                        <h6 className="card-body p-0">reviews: {media_votazione}</h6>
+                        <h6 className="card-body p-0">votes: {media_votazione}</h6>
                         <p className="card-body p-0 mb-0"> {abstract}</p>
                     </div>
                 </section>
