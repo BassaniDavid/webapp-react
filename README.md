@@ -1,5 +1,7 @@
 # progetto
 
+## giorno1
+
 ### MILESTONE 1
 Creare nuovo progetto React aiutandoci con Vite  
 Ripulire l’app da file e codice di esempio non necessari  
@@ -20,4 +22,21 @@ Creare 2 pagine:
 ### Bonus
 - Impostare la struttura del lavoro in maniera da sfruttare la riutailizzabilità dei componenti React e le loro props
 - Aggiungere, nella pagina dei film, un campo per cercare su tutti i campi utili del db (es. titolo, abstract)
-- Curare l’aspetto estetico
+- Curare l’aspetto estetico 
+---
+
+## giorno 2
+
+
+### MILESTONE 1
+- Collegare la lista dei movies a una pagina di dettaglio movie.  
+- Effettuare una chiamata AJAX dalla pagina di dettaglio per ottenere il dettaglio di un singolo film, comprese le sue recensioni
+### MILESTONE 2
+- Rappresentare le informazioni del movie
+### MILESTONE 3
+- Creare un componente ReviewCard per rappresentare le informazioni delle recensioni
+### BONUS
+- Rappresentare tutti i voti delle recensioni con un componente StarRating
+### BONUS BONUS
+Sul backend, inizare a realizzare una rotta /movies/:id/reviews per aggiungere una nuova recensione.
+Può restituire un semplice testo "Rotta per aggiungere una recensione";

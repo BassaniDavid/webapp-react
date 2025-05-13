@@ -1,8 +1,10 @@
+// importo destrutturando NavLink da react-router-dom (dopo aver scaricato il pacchetto)
 import { NavLink } from "react-router-dom"
 
 const Header = () => {
 
     return (
+        // semplice navbar con link per le varie pagine
         <div className="bg-dark">
             <nav className="container p-md-5 p-2 fs-3">
                 <ul className="d-flex justify-content-between list-unstyled m-3">
