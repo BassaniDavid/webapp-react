@@ -8,7 +8,7 @@ const MovieCard = ({ data }) => {
 
     return (
         <div className="card p-5">
-            <img src={image} alt={title} className="w-75 mx-auto mb-3" />
+            <img src={image} alt={title} className="w-75 mx-auto mb-3 rounded" />
             <h4 className="card-body">title: {title}</h4>
             <h6 className="card-body">director: {director}</h6>
             <h6 className="card-body">genre: {genre}</h6>

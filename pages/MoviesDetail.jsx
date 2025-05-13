@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import ReviewCard from "../components/reviewCard";
 
 const MoviesDetail = () => {
 
@@ -15,7 +16,7 @@ const MoviesDetail = () => {
     }
 
     function renderReviews() {
-        return movie.reviews?.map(review => <div key={review.id}> {review.text} {review.name} {review.vote} </div>);
+        return movie.reviews?.map(review => <ReviewCard key={review.id} data={review} />);
     }
 
     useEffect(getMovie, [id]);
@@ -23,31 +24,33 @@ const MoviesDetail = () => {
     const { title, director, genre, release_year, abstract, media_votazione, imagePath } = movie;
 
     return (
-        <article>
-            <section>
-                <div>
-                    <img src={imagePath} alt={title} className="w-75 mx-auto mb-3" />
-                </div>
+        <>
+            <h2 className="text-light text-center text-uppercase fs-1 mb-3">film</h2>
+            <article>
+                <section className="card d-flex p-4">
 
-                <div>
-                    <h4 className="card-body">title: {title}</h4>
-                    <h6 className="card-body">genre: {genre}</h6>
-                    <h6 className="card-body">director: {director}</h6>
-                    <h6 className="card-body">release year: {release_year}</h6>
-                </div>
+                    <img src={imagePath} alt={title} className="w-100 mb-4 rounded" />
 
-                <div>
-                    <h6 className="card-body">review: {media_votazione}</h6>
-                    <p className="card-text"> {abstract}</p>
-                </div>
-            </section>
+                    <div>
+                        <h4 className="card-body p-0">title: {title}</h4>
+                        <h6 className="card-body p-0">genre: {genre}</h6>
+                        <h6 className="card-body p-0">director: {director}</h6>
+                        <h6 className="card-body p-0">release year: {release_year}</h6>
+                    </div>
 
-            <section>
-                <h4>recensioni</h4>
-                {renderReviews()}
-            </section>
+                    <div>
+                        <h6 className="card-body p-0">reviews: {media_votazione}</h6>
+                        <p className="card-body p-0 mb-0"> {abstract}</p>
+                    </div>
+                </section>
 
-        </article>
+                <section>
+                    <h4 className="text-light text-center text-uppercase fs-3 my-3">recensioni</h4>
+                    {renderReviews()}
+                </section>
+
+            </article>
+        </>
     )
 }
 
