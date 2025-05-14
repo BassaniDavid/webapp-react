@@ -1,6 +1,6 @@
 # progetto
 
-## giorno1
+# giorno 2
 
 ### MILESTONE 1
 Creare nuovo progetto React aiutandoci con Vite  
@@ -25,7 +25,7 @@ Creare 2 pagine:
 - Curare l’aspetto estetico 
 ---
 
-## giorno 2
+# giorno 3
 
 
 ### MILESTONE 1
@@ -38,5 +38,21 @@ Creare 2 pagine:
 ### BONUS
 - Rappresentare tutti i voti delle recensioni con un componente StarRating
 ### BONUS BONUS
-Sul backend, inizare a realizzare una rotta /movies/:id/reviews per aggiungere una nuova recensione.
+- Sul backend, inizare a realizzare una rotta /movies/:id/reviews per aggiungere una nuova recensione.
 Può restituire un semplice testo "Rotta per aggiungere una recensione";
+---
+
+# giorno 4
+
+### MILESTONE 1 (BACKEND)
+- Predisporre un’API per salvare nel database una nuova recensione legata ad un film
+- Testarla su postman e verificare che nel DB venga effettivamente inserita una nuova recensione
+
+### MILESTONE 2 (FRONTEND)
+- Creare un componente che contenga il form per le recensioni
+- Inserire questo componente nella pagina di dettaglio del film  
+
+ All’invio del form, la nuova recensione viene salvata sul database e visualizzata nella pagina, in fondo alle altre
+
+###  BONUS:
+- Provare a creare un nuovo film con upload immagine (multer)!
