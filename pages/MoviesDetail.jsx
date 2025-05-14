@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ReviewCard from "../components/reviewCard";
 import StarRating from "../components/StarRating";
+import ReviewForm from "../components/ReviewForm";
 
 const MoviesDetail = () => {
 
@@ -44,11 +45,16 @@ const MoviesDetail = () => {
                         <p className="card-body p-0 mb-0 mt-4">abstract: {abstract}</p>
                     </div>
 
+
                 </section>
 
                 <section>
                     <h4 className="text-light text-center text-uppercase fs-3 my-3">recensioni</h4>
-                    {renderReviews()}
+                    {movie.reviews?.length ? renderReviews() : <div>Nessuna recensione</div>}
+                </section>
+
+                <section>
+                    <ReviewForm movie_id={id} />
                 </section>
 
             </article>
