@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react"
 
-const ReviewForm = ({ movie_id }) => {
+const ReviewForm = ({ movie_id, refreshReviews }) => {
 
     const [formData, setFormData] = useState({
         name: '',
@@ -27,7 +27,11 @@ const ReviewForm = ({ movie_id }) => {
         e.preventDefault();
 
         axios.post(`http://localhost:3000/movies/${movie_id}/reviews`, formData)
-            .then(response => console.log(response))
+            .then(response => {
+                console.log(response)
+                refreshReviews()
+            }
+            )
             .catch(err => console.log(err))
     }
 

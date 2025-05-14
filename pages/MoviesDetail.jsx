@@ -54,7 +54,7 @@ const MoviesDetail = () => {
                 </section>
 
                 <section>
-                    <ReviewForm movie_id={id} />
+                    <ReviewForm movie_id={id} refreshReviews={getMovie} />
                 </section>
 
             </article>
