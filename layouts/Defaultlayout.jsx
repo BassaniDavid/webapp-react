@@ -16,7 +16,7 @@ const DefaultLayout = () => {
     return (
         <>
             <Header />
-            <main className="bg-secondary">
+            <main className="bg-secondary min-vh-100">
                 <div className="container py-4">
                     {/* questa parte verrà sostituita con il contenuto della pagina specifica */}
                     <Outlet />

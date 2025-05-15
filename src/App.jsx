@@ -4,6 +4,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // importo le pagine
 import MoviesPage from "../pages/Movies";
 import MoviesDetail from "../pages/MoviesDetail";
+import HomePage from "../pages/HomePage";
+import Contact from "../pages/Contact";
+import AboutUS from "../pages/AboutUS";
+
 
 // importo il layout
 import DefaultLayout from "../layouts/Defaultlayout";
@@ -28,12 +32,12 @@ function App() {
           {/* tutte le rotte passerando prima dal layout */}
           <Route element={<DefaultLayout />}>
             {/* cercando URL generico finiscono sulla home page */}
-            <Route path="/" element={<div>Home page</div>} />
+            <Route path="/" element={<HomePage />} />
             {/* cercando URL con un path specifico finiscono nelle altre pagine */}
             <Route path="/movies" element={<MoviesPage />} />
             <Route path="/movies/:id" element={<MoviesDetail />} />
-            <Route path="/contacts" element={<div>Contatti</div>} />
-            <Route path="/about" element={<div>Chi siamo</div>} />
+            <Route path="/contacts" element={<Contact />} />
+            <Route path="/about" element={<AboutUS />} />
             {/* path in caso di errore nel URl */}
             <Route path="*" element={<div>error 404</div>} />
           </Route>
