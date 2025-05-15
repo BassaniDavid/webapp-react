@@ -7,14 +7,23 @@ import MovieCard from "../components/MovieCard";
 // importo axios (dopo averlo scaricato)
 import axios from "axios";
 
+import { useContext } from "react";
+import GlobalContext from "../context/globalContext";
+
 const MoviesPage = () => {
 
     // variabile di stato
     const [movies, setMovies] = useState([]);
     const [search, setSearch] = useState('');
 
+
+    const { setIsLoading } = useContext(GlobalContext);
+
     // chiamata per ottenere tutti i film passando anche il parametro dell'eventuale ricerca
     function getMovies() {
+
+        setIsLoading(true);
+
         axios.get('http://localhost:3000/movies', {
             params: {
                 search
@@ -25,6 +34,7 @@ const MoviesPage = () => {
                 setMovies(response.data)
             })
             .catch(err => console.log(err))
+            .finally(() => setIsLoading(false))
     }
 
     // evita che la pagina si ricarichi all invio del form e aggiorna la variabile per la ricerca

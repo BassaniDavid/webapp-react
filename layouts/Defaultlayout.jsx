@@ -4,7 +4,15 @@ import { Outlet } from "react-router-dom"
 // importo il componente header
 import Header from "../components/Header"
 
+// contesto e loader
+import { useContext } from "react"
+import GlobalContext from "../context/globalContext"
+import Loader from "../components/loader"
+
 const DefaultLayout = () => {
+
+    const { isLoading } = useContext(GlobalContext)
+
     return (
         <>
             <Header />
@@ -14,6 +22,7 @@ const DefaultLayout = () => {
                     <Outlet />
                 </div>
             </main>
+            {isLoading && <Loader />}
         </>
     )
 }

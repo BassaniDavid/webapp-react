@@ -8,12 +8,22 @@ import MoviesDetail from "../pages/MoviesDetail";
 // importo il layout
 import DefaultLayout from "../layouts/Defaultlayout";
 
+// importo il context
+import GlobalContext from "../context/globalContext";
+
+
+import { useState } from "react";
+
 function App() {
 
+  const [isLoading, setIsLoading] = useState(false);
+
   return (
-    <>
-      {/* struttura per far funzionare le rotte */}
-      <BrowserRouter>
+    <GlobalContext.Provider value={{
+      isLoading,
+      setIsLoading
+    }}>
+      < BrowserRouter>
         <Routes>
           {/* tutte le rotte passerando prima dal layout */}
           <Route element={<DefaultLayout />}>
@@ -29,7 +39,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
+    </GlobalContext.Provider>
   )
 }
 
