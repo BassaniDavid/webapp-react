@@ -55,4 +55,21 @@ Può restituire un semplice testo "Rotta per aggiungere una recensione";
  All’invio del form, la nuova recensione viene salvata sul database e visualizzata nella pagina, in fondo alle altre
 
 ###  BONUS:
-- Provare a creare un nuovo film con upload immagine (multer)!
+- Provare a creare un nuovo film con upload immagine (multer)!  
+---
+
+# giorno 5
+
+### MILESTONE:
+
+Concludere migliorando l’esperienza sulla SPA, inserendo un loader.
+
+- Creare un componente loader  (Questo componente deve poter apparire su qualunque pagina dell app.)
+
+- Creare e sfruttare un Context per dare la possibilità ad ogni componente di attivare o disattivare il loader sulla propria pagina
+
+### BONUS:
+Personalizzare l’aspetto dell app col CSS
+
+### BONUS BONUS:
+provate a validare i campi dei vostri form!
