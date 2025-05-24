@@ -33,9 +33,12 @@ function App() {
           <Route element={<DefaultLayout />}>
             {/* cercando URL generico finiscono sulla home page */}
             <Route path="/" element={<HomePage />} />
+            {/* si può anche scrivere
+            <Route path="/" component={HomePage} /> */}
+
             {/* cercando URL con un path specifico finiscono nelle altre pagine */}
             <Route path="/movies" element={<MoviesPage />} />
-            <Route path="/movies/:id" element={<MoviesDetail />} />
+            <Route path="/movies/:slug" element={<MoviesDetail />} />
             <Route path="/contacts" element={<Contact />} />
             <Route path="/about" element={<AboutUS />} />
             {/* path in caso di errore nel URl */}

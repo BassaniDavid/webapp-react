@@ -11,15 +11,15 @@ const MoviesDetail = () => {
 
     const { setIsLoading } = useContext(GlobalContext);
 
-    const { id } = useParams();
-    console.log(id);
+    const { slug } = useParams();
+
     const [movie, setMovie] = useState({});
 
     function getMovie() {
 
         setIsLoading(true);
 
-        axios(`http://localhost:3000/movies/${id}`)
+        axios(`http://localhost:3000/movies/${slug}`)
             .then(response => setMovie(response.data))
             .catch(err => console.log(err))
             .finally(() => setIsLoading(false))
@@ -29,7 +29,7 @@ const MoviesDetail = () => {
         return movie.reviews?.map(review => <ReviewCard key={review.id} data={review} />);
     }
 
-    useEffect(getMovie, [id]);
+    useEffect(getMovie, [slug]);
 
     const { title, director, genre, release_year, abstract, media_votazione, imagePath } = movie;
 
@@ -62,7 +62,7 @@ const MoviesDetail = () => {
                 </section>
 
                 <section>
-                    <ReviewForm movie_id={id} refreshReviews={getMovie} />
+                    <ReviewForm movie_id={movie.id} refreshReviews={getMovie} />
                 </section>
 
             </article>

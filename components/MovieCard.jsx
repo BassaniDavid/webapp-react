@@ -5,7 +5,7 @@ const MovieCard = ({ data }) => {
 
     console.log(data);
 
-    const { id, title, director, genre, release_year, abstract, media_votazione, image } = data;
+    const { id, title, director, genre, release_year, abstract, media_votazione, image, slug } = data;
 
     return (
         <div className="card p-5 m-3 m-sm-1 m-md-0 h-100">
@@ -16,7 +16,7 @@ const MovieCard = ({ data }) => {
             <h6 className="card-body p-0 mb-2">release year: {release_year}</h6>
             <h6 className="card-body p-0 mb-2">review: <StarRating data={media_votazione} /></h6>
             <p className="card-text"> {abstract}</p>
-            <Link to={`/movies/${id}`} className="btn btn-success w-50 mx-auto">details</Link>
+            <Link to={`/movies/${slug}`} className="btn btn-success w-50 mx-auto">details</Link>
         </div>
     )
 }

@@ -1,5 +1,6 @@
 // importo destrutturando le componenti per rendere reattivo il progetto
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 // importo il componente card
 import MovieCard from "../components/MovieCard";

@@ -18,7 +18,7 @@ const ReviewForm = ({ movie_id, refreshReviews }) => {
 
         setFormData((formData) => ({
             ...formData,
-            [name]: value,
+            [name]: currentValue,
         }))
     }
 
@@ -30,8 +30,7 @@ const ReviewForm = ({ movie_id, refreshReviews }) => {
             .then(response => {
                 console.log(response)
                 refreshReviews()
-            }
-            )
+            })
             .catch(err => console.log(err))
     }
 
@@ -45,7 +44,7 @@ const ReviewForm = ({ movie_id, refreshReviews }) => {
             </div>
             <div>
                 <label htmlFor="review-vote" className="form-label">vote</label>
-                <textarea type="number" min={1} max={5} id="review-vote" name="vote" rows="1" placeholder="5" className="form-control mb-4" value={formData.vote} onChange={handleFormData} />
+                <input type="number" min={1} max={5} id="review-vote" name="vote" rows="1" placeholder="5" className="form-control mb-4" value={formData.vote} onChange={handleFormData} />
             </div>
             <div>
                 <label htmlFor="review-text" className="form-label">review</label>
