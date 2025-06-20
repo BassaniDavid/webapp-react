@@ -70,6 +70,3 @@ Concludere migliorando l’esperienza sulla SPA, inserendo un loader.
 
 ### BONUS:
 - Personalizzare l’aspetto dell app col CSS
-
-### BONUS BONUS:
-- provate a validare i campi dei vostri form!
