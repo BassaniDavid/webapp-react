@@ -1,6 +1,6 @@
-# progetto
+# Setup Web App React (collegato alla repo webapp-react)
 
-# giorno 2
+## giorno 2
 
 ### MILESTONE 1
 Creare nuovo progetto React aiutandoci con Vite  
@@ -25,7 +25,7 @@ Creare 2 pagine:
 - Curare l’aspetto estetico 
 ---
 
-# giorno 3
+## giorno 3
 
 
 ### MILESTONE 1
@@ -42,7 +42,7 @@ Creare 2 pagine:
 Può restituire un semplice testo "Rotta per aggiungere una recensione";
 ---
 
-# giorno 4
+## giorno 4
 
 ### MILESTONE 1 (BACKEND)
 - Predisporre un’API per salvare nel database una nuova recensione legata ad un film
@@ -58,7 +58,7 @@ Può restituire un semplice testo "Rotta per aggiungere una recensione";
 - Provare a creare un nuovo film con upload immagine (multer)!  
 ---
 
-# giorno 5
+## giorno 5
 
 ### MILESTONE:
 
@@ -69,7 +69,7 @@ Concludere migliorando l’esperienza sulla SPA, inserendo un loader.
 - Creare e sfruttare un Context per dare la possibilità ad ogni componente di attivare o disattivare il loader sulla propria pagina
 
 ### BONUS:
-Personalizzare l’aspetto dell app col CSS
+- Personalizzare l’aspetto dell app col CSS
 
 ### BONUS BONUS:
-provate a validare i campi dei vostri form!
+- provate a validare i campi dei vostri form!
